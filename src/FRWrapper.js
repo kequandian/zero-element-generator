@@ -158,9 +158,9 @@ function Wrapper(
     toggleModal();
   };
 
-  // const handleSubmit = () => {
-  //   submit(displaySchema);
-  // };
+  const handleSubmit = () => {
+    submit(displaySchema);
+  };
 
   const getValue = () => {
     return displaySchema;
@@ -261,9 +261,11 @@ function Wrapper(
                   清空
                 </Button>
               )}
-              {<Button className="mr2" onClick={toggleModal3}>
+              {
+                <Button className="mr2" onClick={toggleModal3}>
                   保存
-                </Button>}
+                </Button>
+              }
               {_showDefaultBtns[2] !== false && (
                 <Button className="mr2" onClick={toggleModal2}>
                   导入
@@ -275,15 +277,18 @@ function Wrapper(
                 </Button>
               )}
               {_extraBtns.map((item, idx) => {
-                if(item.text == '保存'){
+                if (item.text == '保存') {
                   const saveClick = item.saveClick;
                   return (
-                    <Button key={idx.toString()} className="mr2" onClick={() => saveClick(displaySchemaString)}>
+                    <Button
+                      key={idx.toString()}
+                      className="mr2"
+                      onClick={() => saveClick(displaySchemaString)}
+                    >
                       {item.text || item.children}
                     </Button>
                   );
-                }
-                else{
+                } else {
                   return (
                     <Button key={idx.toString()} className="mr2" {...item}>
                       {item.text || item.children}
@@ -291,9 +296,11 @@ function Wrapper(
                   );
                 }
               })}
-              {<Button type="primary" className="mr2" onClick={handleSubmit}>
+              {
+                <Button type="primary" className="mr2" onClick={handleSubmit}>
                   保存
-                </Button>}
+                </Button>
+              }
             </div>
             <div className="dnd-container">
               <div style={{ height: preview ? 33 : 0 }}></div>

@@ -39132,9 +39132,11 @@ function Wrapper$1(_ref, ref) {
     copyTOClipboard(displaySchemaString);
     message.info('复制成功');
     toggleModal();
-  }; // const handleSubmit = () => {
-  //   submit(displaySchema);
-  // };
+  };
+
+  var handleSubmit = function handleSubmit() {
+    submit(displaySchema);
+  };
 
   var getValue = function getValue() {
     return displaySchema;
