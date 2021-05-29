@@ -39409,11 +39409,9 @@ function Wrapper$1(_ref, ref) {
     copyTOClipboard__default['default'](displaySchemaString);
     antd.message.info('复制成功');
     toggleModal();
-  };
-
-  var handleSubmit = function handleSubmit() {
-    submit(displaySchema);
-  };
+  }; // const handleSubmit = () => {
+  //   submit(displaySchema);
+  // };
 
   var getValue = function getValue() {
     return displaySchema;
@@ -39584,14 +39582,6 @@ function Wrapper$1(_ref, ref) {
                 },
                 '\u6E05\u7A7A',
               ),
-            /*#__PURE__*/ React__default['default'].createElement(
-              antd.Button,
-              {
-                className: 'mr2',
-                onClick: toggleModal3,
-              },
-              '\u4FDD\u5B58',
-            ),
             _showDefaultBtns[2] !== false &&
               /*#__PURE__*/ React__default['default'].createElement(
                 antd.Button,
@@ -39639,15 +39629,6 @@ function Wrapper$1(_ref, ref) {
                 );
               }
             }),
-            /*#__PURE__*/ React__default['default'].createElement(
-              antd.Button,
-              {
-                type: 'primary',
-                className: 'mr2',
-                onClick: handleSubmit,
-              },
-              '\u4FDD\u5B58',
-            ),
           ),
           /*#__PURE__*/ React__default['default'].createElement(
             'div',
